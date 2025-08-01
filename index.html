@@ -1,19 +1,30 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Monitores - Disciplina MIP8001</title>
 
   <!-- Fonte personalizada e ícones do WhatsApp -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
 
   <style>
+    html,
     body {
-      font-family: 'Space Grotesk', sans-serif;
-      background-color: #bf812d;
+      height: 100%;
       margin: 0;
       padding: 0;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      font-family: "Space Grotesk", sans-serif;
+      background-color: #bf812d;
     }
 
     header {
@@ -24,6 +35,7 @@
       overflow: hidden;
       text-align: center;
       padding-top: 60px;
+      flex-shrink: 0;
     }
 
     .reveal-image {
@@ -38,8 +50,12 @@
     }
 
     @keyframes slideDown {
-      0% { transform: translateY(0%); }
-      100% { transform: translateY(100%); }
+      0% {
+        transform: translateY(0%);
+      }
+      100% {
+        transform: translateY(100%);
+      }
     }
 
     .header-text {
@@ -48,6 +64,7 @@
     }
 
     .container {
+      flex-grow: 1;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
@@ -58,7 +75,7 @@
       position: relative;
       background-color: #f5f5f5;
       border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
       margin: 15px;
       width: 300px;
       height: 400px;
@@ -132,12 +149,13 @@
     }
 
     .extra-links {
-      margin: 40px auto;
       display: flex;
       flex-direction: column;
       gap: 20px;
-      max-width: 100%;
       padding: 0;
+      margin: 0;
+      width: 100%;
+      flex-shrink: 0;
     }
 
     .link-box {
@@ -150,6 +168,8 @@
       font-size: 20px;
       font-weight: bold;
       transition: transform 0.3s ease;
+      border-radius: 0;
+      user-select: none;
     }
 
     .link-box:hover {
@@ -166,13 +186,14 @@
 
     .link3 {
       background-color: #80cdc1;
+      color: #003c30;
+      font-weight: 900;
     }
   </style>
 </head>
 <body>
-
   <header>
-    <img src="fsp_cover.jpg" alt="Banner da disciplina" class="reveal-image">
+    <img src="fsp_cover.jpg" alt="Banner da disciplina" class="reveal-image" />
     <div class="header-text">
       <h1>Monitores - MIP8001 (FSP-USP)</h1>
       <p>Organismos Patogênicos de Importância em Saúde Pública (2025)</p>
@@ -181,91 +202,139 @@
 
   <div class="container">
     <!-- Card 1 -->
-     
     <div class="card">
-      <img src="mayara.jpg" alt="Mayara Bertanhe" class="cover">
+      <img src="mayara.jpg" alt="Mayara Bertanhe" class="cover" />
       <div class="content">
         <h2>Mayara Bertanhe</h2>
-        <p>Graduada em Medicina Veterinária pela USP. Doutoranda em Moléstias Infecciosas (FMUSP), com doutorado sanduíche na Imperial College London. Atua em Saúde Pública, Saúde Única e Virologia em Animais Silvestres, com foco em metaviromas.</p>
+        <p>
+          Graduada em Medicina Veterinária pela USP. Doutoranda em Moléstias
+          Infecciosas (FMUSP), com doutorado sanduíche na Imperial College
+          London. Atua em Saúde Pública, Saúde Única e Virologia em Animais
+          Silvestres, com foco em metaviromas.
+        </p>
         <p class="email">mayara.bertanhe@alumni.usp.br</p>
-        <a href="https://chat.whatsapp.com/SEU_CODIGO_AQUI" target="_blank" class="whatsapp-link">
-          <i class="fab fa-whatsapp"></i> Entrar no grupo
-        </a>
+        <a
+          href="https://chat.whatsapp.com/SEU_CODIGO_AQUI"
+          target="_blank"
+          class="whatsapp-link"
+          ><i class="fab fa-whatsapp"></i> Entrar no grupo</a
+        >
       </div>
     </div>
 
     <!-- Card 2 -->
-     <div class="card">
-      <img src="layla.jpg" alt="Layla Honorato" class="cover">
+    <div class="card">
+      <img src="layla.jpg" alt="Layla Honorato" class="cover" />
       <div class="content">
         <h2>Layla Honorato</h2>
-        <p>Graduada em Biomedicina (UNIP) com especialização em Análises Clínicas, Anatomia e Gestão em Saúde (USP). Doutoranda em Infectologia (FMUSP), com foco em Biologia Molecular e Virologia.</p>
+        <p>
+          Graduada em Biomedicina (UNIP) com especialização em Análises
+          Clínicas, Anatomia e Gestão em Saúde (USP). Doutoranda em Infectologia
+          (FMUSP), com foco em Biologia Molecular e Virologia.
+        </p>
         <p class="email">_@usp.br</p>
-        <a href="https://chat.whatsapp.com/SEU_CODIGO_AQUI" target="_blank" class="whatsapp-link">
-          <i class="fab fa-whatsapp"></i> Entrar no grupo
-        </a>
+        <a
+          href="https://chat.whatsapp.com/SEU_CODIGO_AQUI"
+          target="_blank"
+          class="whatsapp-link"
+          ><i class="fab fa-whatsapp"></i> Entrar no grupo</a
+        >
       </div>
     </div>
 
     <!-- Card 3 -->
     <div class="card">
-      <img src="heuder.jpg" alt="Heuder Paião" class="cover">
+      <img src="heuder.jpg" alt="Heuder Paião" class="cover" />
       <div class="content">
         <h2>Heuder Paião</h2>
-        <p>Graduado em Biomedicina (FMU) com especialização em Análises Clínicas (HC-USP). Ex-bolsista FAPESP em pesquisa de meningites virais. Doutorando em Infectologia (FMUSP), com foco em Biologia Molecular aplicada à Virologia.</p>
+        <p>
+          Graduado em Biomedicina (FMU) com especialização em Análises Clínicas
+          (HC-USP). Ex-bolsista FAPESP em pesquisa de meningites virais.
+          Doutorando em Infectologia (FMUSP), com foco em Biologia Molecular
+          aplicada à Virologia.
+        </p>
         <p class="email">_@usp.br</p>
-        <a href="https://chat.whatsapp.com/SEU_CODIGO_AQUI" target="_blank" class="whatsapp-link">
-          <i class="fab fa-whatsapp"></i> Entrar no grupo
-        </a>
+        <a
+          href="https://chat.whatsapp.com/SEU_CODIGO_AQUI"
+          target="_blank"
+          class="whatsapp-link"
+          ><i class="fab fa-whatsapp"></i> Entrar no grupo</a
+        >
       </div>
     </div>
 
     <!-- Card 4 -->
-     <div class="card">
-      <img src="almir.jpg" alt="Almir R. S. Junior" class="cover">
+    <div class="card">
+      <img src="almir.jpg" alt="Almir R. S. Junior" class="cover" />
       <div class="content">
         <h2>Almir R. da Silva Junior</h2>
-        <p>Graduado em Biomedicina (UNISA), com intercâmbio no Trinity College Dublin (Irlanda). Mestre em Ciências (USP) e especialista em Virologia. Doutorando em Doenças Infecciosas e Saúde Global (FMUSP).</p>
+        <p>
+          Graduado em Biomedicina (UNISA), com intercâmbio no Trinity College
+          Dublin (Irlanda). Mestre em Ciências (USP) e especialista em Virologia.
+          Doutorando em Doenças Infecciosas e Saúde Global (FMUSP).
+        </p>
         <p class="email">_@usp.br</p>
-        <a href="https://chat.whatsapp.com/SEU_CODIGO_AQUI" target="_blank" class="whatsapp-link">
-          <i class="fab fa-whatsapp"></i> Entrar no grupo
-        </a>
+        <a
+          href="https://chat.whatsapp.com/SEU_CODIGO_AQUI"
+          target="_blank"
+          class="whatsapp-link"
+          ><i class="fab fa-whatsapp"></i> Entrar no grupo</a
+        >
       </div>
     </div>
 
     <!-- Card 5 -->
-     <div class="card">
-      <img src="cayuan.jpg" alt="Cayuan Tadeu" class="cover">
+    <div class="card">
+      <img src="cayuan.jpg" alt="Cayuan Tadeu" class="cover" />
       <div class="content">
         <h2>Cayuan Tadeu</h2>
-        <p>Graduado em Biomedicina (UNINOVE) e Ciências Biológicas (INEQ). Mestre em Medicina Tropical (USP) e especialista em Protozoologia (HC-FMUSP). Doutorando em Doenças Infecciosas e Saúde Global, com foco em diagnóstico de parasitas em alimentos.</p>
+        <p>
+          Graduado em Biomedicina (UNINOVE) e Ciências Biológicas (INEQ). Mestre
+          em Medicina Tropical (USP) e especialista em Protozoologia
+          (HC-FMUSP). Doutorando em Doenças Infecciosas e Saúde Global, com foco
+          em diagnóstico de parasitas em alimentos.
+        </p>
         <p class="email">_@usp.br</p>
-        <a href="https://chat.whatsapp.com/SEU_CODIGO_AQUI" target="_blank" class="whatsapp-link">
-          <i class="fab fa-whatsapp"></i> Entrar no grupo
-        </a>
+        <a
+          href="https://chat.whatsapp.com/SEU_CODIGO_AQUI"
+          target="_blank"
+          class="whatsapp-link"
+          ><i class="fab fa-whatsapp"></i> Entrar no grupo</a
+        >
       </div>
     </div>
 
- <!-- Card 6 -->
+    <!-- Card 6 -->
     <div class="card">
-      <img src="juliana.jpg" alt="Juliana Lira" class="cover">
+      <img src="juliana.jpg" alt="Juliana Lira" class="cover" />
       <div class="content">
         <h2>Juliana Lira</h2>
-        <p>Graduada em Enfermagem (UNASP), especialista em Gestão Hospitalar (UNINORTE), mestre pela UFAM. Doutoranda em Saúde Global (USP) com pesquisa sobre Influenza. Docente na UNIFESP.</p>
+        <p>
+          Graduada em Enfermagem (UNASP), especialista em Gestão Hospitalar
+          (UNINORTE), mestre pela UFAM. Doutoranda em Saúde Global (USP) com
+          pesquisa sobre Influenza. Docente na UNIFESP.
+        </p>
         <p class="email">_@usp.br</p>
-        <a href="https://chat.whatsapp.com/SEU_CODIGO_AQUI" target="_blank" class="whatsapp-link">
-          <i class="fab fa-whatsapp"></i> Entrar no grupo
-        </a>
+        <a
+          href="https://chat.whatsapp.com/SEU_CODIGO_AQUI"
+          target="_blank"
+          class="whatsapp-link"
+          ><i class="fab fa-whatsapp"></i> Entrar no grupo</a
+        >
       </div>
     </div>
-
-    
-  <!-- Links retangulares -->
-  <div class="extra-links">
-    <a href="https://LINK1" target="_blank" class="link-box link1">Grupo de Dúvidas Gerais</a>
-    <a href="https://LINK2" target="_blank" class="link-box link2">Grupo para Atividades Práticas</a>
-    <a href="https://LINK3" target="_blank" class="link-box link3">Grupo para Discussões Científicas</a>
   </div>
 
+  <div class="extra-links">
+    <a href="https://LINK1" target="_blank" class="link-box link1"
+      >Grupo de Dúvidas Gerais</a
+    >
+    <a href="https://LINK2" target="_blank" class="link-box link2"
+      >Grupo para Atividades Práticas</a
+    >
+    <a href="https://LINK3" target="_blank" class="link-box link3"
+      >Grupo para Discussões Científicas</a
+    >
+  </div>
 </body>
 </html>
