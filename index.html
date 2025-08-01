@@ -1,122 +1,187 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Monitores - MIP8001</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <title>Monitores - Disciplina MIP8001</title>
+
+  <!-- Fonte personalizada e ícones do WhatsApp -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: #f0f0f0;
+      font-family: 'Space Grotesk', sans-serif;
+      background-color: #bf812d;
       margin: 0;
       padding: 0;
     }
 
     header {
       position: relative;
-      height: 300px;
-      background: #333;
+      background-color: #003c30;
+      color: #f5f5f5;
+      height: 200px;
       overflow: hidden;
+      text-align: center;
+      padding-top: 60px;
     }
 
-    header img.reveal-image {
+    .reveal-image {
       position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
       height: 100%;
       object-fit: cover;
-      animation: slideDown 6s ease-in-out forwards;
       z-index: 2;
+      animation: slideDown 6s ease-in-out forwards;
     }
 
     @keyframes slideDown {
-      0% {
-        transform: translateY(-100%);
-        opacity: 0;
-      }
-      100% {
-        transform: translateY(0);
-        opacity: 1;
-      }
+      0% { transform: translateY(0%); }
+      100% { transform: translateY(100%); }
+    }
+
+    .header-text {
+      position: relative;
+      z-index: 1;
     }
 
     .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 40px 20px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
     }
 
     .card {
-      background: #fff;
-      border-radius: 10px;
+      position: relative;
+      background-color: #f5f5f5;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      margin: 15px;
+      width: 300px;
+      height: 400px;
       overflow: hidden;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
       transition: transform 0.3s ease;
-      display: flex;
-      flex-direction: column;
     }
 
     .card:hover {
-      transform: scaleX(1.03);
+      transform: scale(1.05);
     }
 
     .card .cover {
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
-      height: 250px;
+      height: 100%;
       object-fit: cover;
+      transition: opacity 0.5s ease;
+      z-index: 2;
+    }
+
+    .card:hover .cover {
+      opacity: 0;
     }
 
     .card .content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
       padding: 20px;
+      height: 100%;
+      box-sizing: border-box;
+      overflow-y: auto;
     }
 
     .card h2 {
       margin-top: 0;
-      font-size: 20px;
-      color: #333;
     }
 
     .card p {
       font-size: 14px;
-      color: #555;
+      line-height: 1.4;
     }
 
-    .card .email {
-      font-size: 13px;
-      color: #888;
+    .email {
       margin-top: 10px;
+      font-weight: bold;
     }
 
     .whatsapp-link {
-      margin-top: 15px;
       display: inline-block;
-      background-color: #25D366;
+      margin-top: 15px;
+      padding: 8px 12px;
+      background-color: #25d366;
       color: white;
-      padding: 10px 15px;
       border-radius: 5px;
       text-decoration: none;
       font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .whatsapp-link:hover {
+      background-color: #1ebc59;
     }
 
     .whatsapp-link i {
       margin-right: 8px;
     }
 
-    .whatsapp-link:hover {
-      background-color: #1ebe5d;
+    .extra-links {
+      margin: 40px auto;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      max-width: 100%;
+      padding: 0;
+    }
+
+    .link-box {
+      display: block;
+      width: 100%;
+      text-align: center;
+      padding: 30px;
+      color: white;
+      text-decoration: none;
+      font-size: 20px;
+      font-weight: bold;
+      transition: transform 0.3s ease;
+    }
+
+    .link-box:hover {
+      transform: scaleX(1.1);
+    }
+
+    .link1 {
+      background-color: #80cdc1;
+    }
+
+    .link2 {
+      background-color: #35978f;
+    }
+
+    .link3 {
+      background-color: #01665e;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <img src="header.jpg" alt="Banner" class="reveal-image" />
+    <img src="fsp_cover.jpg" alt="Banner da disciplina" class="reveal-image">
+    <div class="header-text">
+      <h1>Monitores - MIP8001 (FSP-USP)</h1>
+      <p>Organismos Patogênicos de Importância em Saúde Pública (2025)</p>
+    </div>
   </header>
 
   <div class="container">
+    <!-- Card 1 -->
+     
     <div class="card">
       <img src="mayara.jpg" alt="Mayara Bertanhe" class="cover">
       <div class="content">
@@ -129,7 +194,8 @@
       </div>
     </div>
 
-    <div class="card">
+    <!-- Card 2 -->
+     <div class="card">
       <img src="layla.jpg" alt="Layla Honorato" class="cover">
       <div class="content">
         <h2>Layla Honorato</h2>
@@ -141,6 +207,7 @@
       </div>
     </div>
 
+    <!-- Card 3 -->
     <div class="card">
       <img src="heuder.jpg" alt="Heuder Paião" class="cover">
       <div class="content">
@@ -153,7 +220,8 @@
       </div>
     </div>
 
-    <div class="card">
+    <!-- Card 4 -->
+     <div class="card">
       <img src="almir.jpg" alt="Almir R. S. Junior" class="cover">
       <div class="content">
         <h2>Almir R. da Silva Junior</h2>
@@ -165,7 +233,8 @@
       </div>
     </div>
 
-    <div class="card">
+    <!-- Card 5 -->
+     <div class="card">
       <img src="cayuan.jpg" alt="Cayuan Tadeu" class="cover">
       <div class="content">
         <h2>Cayuan Tadeu</h2>
@@ -177,6 +246,7 @@
       </div>
     </div>
 
+ <!-- Card 6 -->
     <div class="card">
       <img src="juliana.jpg" alt="Juliana Lira" class="cover">
       <div class="content">
@@ -189,6 +259,12 @@
       </div>
     </div>
 
+    
+  <!-- Links retangulares -->
+  <div class="extra-links">
+    <a href="https://chat.whatsapp.com/SEU_LINK1" target="_blank" class="link-box link1">Grupo de Dúvidas Gerais</a>
+    <a href="https://chat.whatsapp.com/SEU_LINK2" target="_blank" class="link-box link2">Grupo para Atividades Práticas</a>
+    <a href="https://chat.whatsapp.com/SEU_LINK3" target="_blank" class="link-box link3">Grupo para Discussões Científicas</a>
   </div>
 
 </body>
