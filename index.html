@@ -1,48 +1,32 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Monitores - Disciplina MIP8001</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Monitores - MIP8001</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     body {
-      font-family: Charter, Bitstream Charter;
-      background-color: #d8b365;
+      font-family: Arial, sans-serif;
+      background: #f0f0f0;
       margin: 0;
       padding: 0;
     }
 
     header {
-      background-color: #5ab4ac;
-      color: #f5f5f5;
-      padding: 40px 20px;
-      text-align: center;
       position: relative;
+      height: 300px;
+      background: #333;
       overflow: hidden;
     }
 
-    header h1 {
-      margin: 0;
-      font-size: 32px;
-      z-index: 3;
-      position: relative;
-    }
-
-    header p {
-      margin: 5px 0 0;
-      font-size: 18px;
-      z-index: 3;
-      position: relative;
-    }
-
-    .reveal-image {
+    header img.reveal-image {
       position: absolute;
-      top: 0;
-      left: 0;
       width: 100%;
       height: 100%;
       object-fit: cover;
-      z-index: 2;
       animation: slideDown 6s ease-in-out forwards;
+      z-index: 2;
     }
 
     @keyframes slideDown {
@@ -57,23 +41,22 @@
     }
 
     .container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      padding: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
     }
 
     .card {
-      position: relative;
-      background-color: #f5f5f5;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-      margin: 15px;
-      width: 300px;
-      height: 400px;
+      background: #fff;
+      border-radius: 10px;
       overflow: hidden;
-      text-align: center;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s ease;
+      display: flex;
+      flex-direction: column;
     }
 
     .card:hover {
@@ -81,94 +64,56 @@
     }
 
     .card .cover {
-      position: absolute;
-      top: 0;
-      left: 0;
       width: 100%;
-      height: 100%;
+      height: 250px;
       object-fit: cover;
-      transition: opacity 0.5s ease;
-      z-index: 2;
-    }
-
-    .card:hover .cover {
-      opacity: 0;
     }
 
     .card .content {
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 1;
       padding: 20px;
-      height: 100%;
-      box-sizing: border-box;
-      overflow-y: auto;
     }
 
     .card h2 {
       margin-top: 0;
+      font-size: 20px;
+      color: #333;
     }
 
     .card p {
       font-size: 14px;
-      line-height: 1.4;
+      color: #555;
     }
 
-    .email {
+    .card .email {
+      font-size: 13px;
+      color: #888;
       margin-top: 10px;
-      font-weight: bold;
     }
 
-    .whatsapp-icon {
-      position: absolute;
-      bottom: 10px;
-      right: 10px;
-      z-index: 3;
-      width: 30px;
-      height: 30px;
-    }
-
-    .whatsapp-icon img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-    }
-
-    .links {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 20px;
-      padding: 40px 20px;
-    }
-
-    .link-box {
-      display: block;
-      width: 80%;
-      max-width: 600px;
-      text-align: center;
-      padding: 20px;
+    .whatsapp-link {
+      margin-top: 15px;
+      display: inline-block;
+      background-color: #25D366;
       color: white;
+      padding: 10px 15px;
+      border-radius: 5px;
       text-decoration: none;
-      font-size: 18px;
       font-weight: bold;
-      border-radius: 8px;
-      background-color: #5ab4ac;
-      transition: all 0.3s ease;
-      transform-origin: center;
     }
 
-    .link-box:hover {
-      transform: scaleX(1.03);
+    .whatsapp-link i {
+      margin-right: 8px;
+    }
+
+    .whatsapp-link:hover {
+      background-color: #1ebe5d;
     }
   </style>
 </head>
 <body>
+
   <header>
-    <h1>Monitores - MIP8001 (FSP-USP)</h1>
-    <p>Organismos Patogênicos de Importância em Saúde Pública (2025)</p>
-    <img src="banner.jpg" alt="Banner" class="reveal-image">
+    <img src="header.jpg" alt="Banner" class="reveal-image" />
   </header>
 
   <div class="container">
@@ -178,10 +123,10 @@
         <h2>Mayara Bertanhe</h2>
         <p>Graduada em Medicina Veterinária pela USP. Doutoranda em Moléstias Infecciosas (FMUSP), com doutorado sanduíche na Imperial College London. Atua em Saúde Pública, Saúde Única e Virologia em Animais Silvestres, com foco em metaviromas.</p>
         <p class="email">mayara.bertanhe@alumni.usp.br</p>
+        <a href="https://chat.whatsapp.com/SEU_CODIGO_AQUI" target="_blank" class="whatsapp-link">
+          <i class="fab fa-whatsapp"></i> Entrar no grupo
+        </a>
       </div>
-      <a href="https://chat.whatsapp.com/SEU-LINK-AQUI" class="whatsapp-icon" target="_blank">
-        <img src="whatsapp-icon.png" alt="WhatsApp">
-      </a>
     </div>
 
     <div class="card">
@@ -189,19 +134,62 @@
       <div class="content">
         <h2>Layla Honorato</h2>
         <p>Graduada em Biomedicina (UNIP) com especialização em Análises Clínicas, Anatomia e Gestão em Saúde (USP). Doutoranda em Infectologia (FMUSP), com foco em Biologia Molecular e Virologia.</p>
+        <p class="email">_@usp.br</p>
+        <a href="https://chat.whatsapp.com/SEU_CODIGO_AQUI" target="_blank" class="whatsapp-link">
+          <i class="fab fa-whatsapp"></i> Entrar no grupo
+        </a>
       </div>
-      <a href="https://chat.whatsapp.com/SEU-LINK-AQUI" class="whatsapp-icon" target="_blank">
-        <img src="whatsapp-icon.png" alt="WhatsApp">
-      </a>
     </div>
 
-    <!-- Repita para os outros cartões com seus respectivos dados -->
+    <div class="card">
+      <img src="heuder.jpg" alt="Heuder Paião" class="cover">
+      <div class="content">
+        <h2>Heuder Paião</h2>
+        <p>Graduado em Biomedicina (FMU) com especialização em Análises Clínicas (HC-USP). Ex-bolsista FAPESP em pesquisa de meningites virais. Doutorando em Infectologia (FMUSP), com foco em Biologia Molecular aplicada à Virologia.</p>
+        <p class="email">_@usp.br</p>
+        <a href="https://chat.whatsapp.com/SEU_CODIGO_AQUI" target="_blank" class="whatsapp-link">
+          <i class="fab fa-whatsapp"></i> Entrar no grupo
+        </a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="almir.jpg" alt="Almir R. S. Junior" class="cover">
+      <div class="content">
+        <h2>Almir R. da Silva Junior</h2>
+        <p>Graduado em Biomedicina (UNISA), com intercâmbio no Trinity College Dublin (Irlanda). Mestre em Ciências (USP) e especialista em Virologia. Doutorando em Doenças Infecciosas e Saúde Global (FMUSP).</p>
+        <p class="email">_@usp.br</p>
+        <a href="https://chat.whatsapp.com/SEU_CODIGO_AQUI" target="_blank" class="whatsapp-link">
+          <i class="fab fa-whatsapp"></i> Entrar no grupo
+        </a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="cayuan.jpg" alt="Cayuan Tadeu" class="cover">
+      <div class="content">
+        <h2>Cayuan Tadeu</h2>
+        <p>Graduado em Biomedicina (UNINOVE) e Ciências Biológicas (INEQ). Mestre em Medicina Tropical (USP) e especialista em Protozoologia (HC-FMUSP). Doutorando em Doenças Infecciosas e Saúde Global, com foco em diagnóstico de parasitas em alimentos.</p>
+        <p class="email">_@usp.br</p>
+        <a href="https://chat.whatsapp.com/SEU_CODIGO_AQUI" target="_blank" class="whatsapp-link">
+          <i class="fab fa-whatsapp"></i> Entrar no grupo
+        </a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="juliana.jpg" alt="Juliana Lira" class="cover">
+      <div class="content">
+        <h2>Juliana Lira</h2>
+        <p>Graduada em Enfermagem (UNASP), especialista em Gestão Hospitalar (UNINORTE), mestre pela UFAM. Doutoranda em Saúde Global (USP) com pesquisa sobre Influenza. Docente na UNIFESP.</p>
+        <p class="email">_@usp.br</p>
+        <a href="https://chat.whatsapp.com/SEU_CODIGO_AQUI" target="_blank" class="whatsapp-link">
+          <i class="fab fa-whatsapp"></i> Entrar no grupo
+        </a>
+      </div>
+    </div>
+
   </div>
 
-  <div class="links">
-    <a href="https://exemplo.com/material" class="link-box">Acesse os materiais da disciplina</a>
-    <a href="https://exemplo.com/inscricao" class="link-box">Formulário de inscrição</a>
-    <a href="https://exemplo.com/faq" class="link-box">Dúvidas frequentes (FAQ)</a>
-  </div>
 </body>
 </html>
