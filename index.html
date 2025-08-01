@@ -3,27 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <title>Monitores - Disciplina MIP8001</title>
-
-  <!-- Fonte personalizada e ícones do WhatsApp -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
-
   <style>
     body {
-      font-family: 'Space Grotesk', sans-serif;
-      background-color: #bf812d;
+      font-family: Charter, Bitstream Charter;
+      background-color: #d8b365;
       margin: 0;
       padding: 0;
     }
 
     header {
-      position: relative;
-      background-color: #003c30;
+      background-color: #5ab4ac;
       color: #f5f5f5;
-      height: 200px;
-      overflow: hidden;
+      padding: 40px 20px;
       text-align: center;
-      padding-top: 60px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 32px;
+      z-index: 3;
+      position: relative;
+    }
+
+    header p {
+      margin: 5px 0 0;
+      font-size: 18px;
+      z-index: 3;
+      position: relative;
     }
 
     .reveal-image {
@@ -34,17 +42,18 @@
       height: 100%;
       object-fit: cover;
       z-index: 2;
-      animation: slideDown 3s ease-in-out forwards;
+      animation: slideDown 6s ease-in-out forwards;
     }
 
     @keyframes slideDown {
-      0% { transform: translateY(0%); }
-      100% { transform: translateY(100%); }
-    }
-
-    .header-text {
-      position: relative;
-      z-index: 1;
+      0% {
+        transform: translateY(-100%);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
     }
 
     .container {
@@ -64,6 +73,11 @@
       height: 400px;
       overflow: hidden;
       text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scaleX(1.03);
     }
 
     .card .cover {
@@ -106,38 +120,33 @@
       font-weight: bold;
     }
 
-    .whatsapp-link {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 8px 12px;
-      background-color: #25d366;
-      color: white;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background-color 0.3s ease;
+    .whatsapp-icon {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      z-index: 3;
+      width: 30px;
+      height: 30px;
     }
 
-    .whatsapp-link:hover {
-      background-color: #1ebc59;
+    .whatsapp-icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
     }
 
-    .whatsapp-link i {
-      margin-right: 8px;
-    }
-
-    .extra-links {
-      margin: 40px auto;
+    .links {
       display: flex;
       flex-direction: column;
+      align-items: center;
       gap: 20px;
-      max-width: 900px;
-      padding: 0 20px;
+      padding: 40px 20px;
     }
 
     .link-box {
       display: block;
-      width: 100%;
+      width: 80%;
+      max-width: 600px;
       text-align: center;
       padding: 20px;
       color: white;
@@ -145,54 +154,34 @@
       font-size: 18px;
       font-weight: bold;
       border-radius: 8px;
-      transition: background-color 0.3s ease;
-    }
-
-    .box1 {
       background-color: #5ab4ac;
-    }
-    .box1:hover {
-      background-color: #4da09b;
-    }
-
-    .box2 {
-      background-color: #d8b365;
-    }
-    .box2:hover {
-      background-color: #c4a058;
+      transition: all 0.3s ease;
+      transform-origin: center;
     }
 
-    .box3 {
-      background-color: #f5f5f5;
-      color: #333;
-    }
-    .box3:hover {
-      background-color: #e6e6e6;
+    .link-box:hover {
+      transform: scaleX(1.03);
     }
   </style>
 </head>
 <body>
-
   <header>
-    <img src="fsp_cover.jpg" alt="Banner da disciplina" class="reveal-image">
-    <div class="header-text">
-      <h1>Monitores - MIP8001 (FSP-USP)</h1>
-      <p>Organismos Patogênicos de Importância em Saúde Pública (2025)</p>
-    </div>
+    <h1>Monitores - MIP8001 (FSP-USP)</h1>
+    <p>Organismos Patogênicos de Importância em Saúde Pública (2025)</p>
+    <img src="banner.jpg" alt="Banner" class="reveal-image">
   </header>
 
   <div class="container">
-
     <div class="card">
       <img src="mayara.jpg" alt="Mayara Bertanhe" class="cover">
       <div class="content">
         <h2>Mayara Bertanhe</h2>
         <p>Graduada em Medicina Veterinária pela USP. Doutoranda em Moléstias Infecciosas (FMUSP), com doutorado sanduíche na Imperial College London. Atua em Saúde Pública, Saúde Única e Virologia em Animais Silvestres, com foco em metaviromas.</p>
         <p class="email">mayara.bertanhe@alumni.usp.br</p>
-        <a href="https://chat.whatsapp.com/SEU_CODIGO_MAYARA" target="_blank" class="whatsapp-link">
-          <i class="fab fa-whatsapp"></i> Entrar no grupo
-        </a>
       </div>
+      <a href="https://chat.whatsapp.com/SEU-LINK-AQUI" class="whatsapp-icon" target="_blank">
+        <img src="whatsapp-icon.png" alt="WhatsApp">
+      </a>
     </div>
 
     <div class="card">
@@ -200,40 +189,19 @@
       <div class="content">
         <h2>Layla Honorato</h2>
         <p>Graduada em Biomedicina (UNIP) com especialização em Análises Clínicas, Anatomia e Gestão em Saúde (USP). Doutoranda em Infectologia (FMUSP), com foco em Biologia Molecular e Virologia.</p>
-        <p class="email">layla@usp.br</p>
-        <a href="https://chat.whatsapp.com/SEU_CODIGO_LAYLA" target="_blank" class="whatsapp-link">
-          <i class="fab fa-whatsapp"></i> Entrar no grupo
-        </a>
       </div>
+      <a href="https://chat.whatsapp.com/SEU-LINK-AQUI" class="whatsapp-icon" target="_blank">
+        <img src="whatsapp-icon.png" alt="WhatsApp">
+      </a>
     </div>
 
-    <div class="card">
-      <img src="heuder.jpg" alt="Heuder Paião" class="cover">
-      <div class="content">
-        <h2>Heuder Paião</h2>
-        <p>Graduado em Biomedicina (FMU) com especialização em Análises Clínicas (HC-USP). Ex-bolsista FAPESP em pesquisa de meningites virais. Doutorando em Infectologia (FMUSP), com foco em Biologia Molecular aplicada à Virologia.</p>
-        <p class="email">heuder@usp.br</p>
-        <a href="https://chat.whatsapp.com/SEU_CODIGO_HEUDER" target="_blank" class="whatsapp-link">
-          <i class="fab fa-whatsapp"></i> Entrar no grupo
-        </a>
-      </div>
-    </div>
-
-    <!-- Adicione mais cards conforme necessário -->
-
+    <!-- Repita para os outros cartões com seus respectivos dados -->
   </div>
 
-  <div class="extra-links">
-    <a href="https://exemplo.com/forum" target="_blank" class="link-box box1">
-      Fórum - Dúvidas, sugestões e materiais de interesse
-    </a>
-    <a href="https://exemplo.com/planilha" target="_blank" class="link-box box2">
-      Planilha de divisão dos grupos e temas
-    </a>
-    <a href="https://exemplo.com/materiais" target="_blank" class="link-box box3">
-      Materiais de apoio
-    </a>
+  <div class="links">
+    <a href="https://exemplo.com/material" class="link-box">Acesse os materiais da disciplina</a>
+    <a href="https://exemplo.com/inscricao" class="link-box">Formulário de inscrição</a>
+    <a href="https://exemplo.com/faq" class="link-box">Dúvidas frequentes (FAQ)</a>
   </div>
-
 </body>
 </html>
